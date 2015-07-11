@@ -23,28 +23,34 @@ except:
 # looking for a database file, and giving an error if the file isn't found.
 
 count = 0
+executed_count = 0
 for line in db:
 	count = count + 1
 db.close()
 db = open(db_location)
+executed = False
 
-while True:
-	input = raw_input(username + "@" + host + ":" + location + prompt)
+while count >= executed_count:
+	query = username + "@" + host + ":" + location + prompt
+	input = raw_input(query)
 	if input == "exit":
 		exit()
 	elif input == "x":
 		exit()
 	else:
-		input = input + " -> "
+		input_line = input + " -> "
 		for line in db:
-			if line.startswith(input):
-				execute_platform = line.split(input,1)
+			if line.startswith(input_line):
+				execute_platform = line.split(input_line,1)
 				execute = execute_platform[1]
 				execute = execute.rstrip()
 				execute = terminal_command + execute
 				subprocess.call(execute, shell=True)
-				subprocess.call("ralia.sh", shell=True)
-				exit()
+				executed_count = executed_count + 1
+				executed = True
+				executed_count = 0
 			else:
+				executed_count = executed_count + 1
 				continue
-
+	if executed == False:
+		subprocess.call(input, shell=True)

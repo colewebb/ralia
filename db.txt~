@@ -39,3 +39,4 @@ clone -> xfce4-terminal -x ralia.sh
 update -> sudo apt-get upgrade
 nano -> nano
 gg -> firefox https://www.google.com/?gws_rd=ssl
+edit-source-dev -> geary /home/rebooted/Scripts/ralia/ralia_dev.py
