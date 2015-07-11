@@ -1,0 +1,41 @@
+backup -> backup.sh
+ff -> firefox
+lock -> slock
+edit-db -> gedit ~/Scripts/ralia/db.txt
+blender -> /home/rebooted/Scripts/blender-2.74-linux-glibc211-i686/blender
+bye -> bye.sh
+pandora -> pianobar
+eclipse -> /home/rebooted/Scripts/eclipse/eclipse
+lighttable -> /home/rebooted/Scripts/LightTable/LightTable.sh
+ms-code -> /home/rebooted/Scripts/ms-code/code
+google -> firefox https://www.google.com/?gws_rd=ssl
+mail -> geary
+twitter -> polly
+school -> firefox https://www.straighterline.com/customer/account/login/
+office -> firefox https://login.microsoftonline.com/
+live.com -> firefox https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1436462554&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fblu182.mail.live.com%2Fdefault.aspx%3Frru%3Dinbox&lc=1033&id=64855&mkt=en-us&cbcxt=mai
+t -> xfce4-terminal
+monitor -> xfce4-taskmanager
+word -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/WINWORD.EXE"
+excel -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/EXCEL.EXE"
+access -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/MSACCESS.EXE"
+publisher -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/MSPUB.EXE"
+c -> speedcrunch
+r -> xfce4-appfinder --collapsed
+photoshop -> wine "/home/rebooted/.wine/drive_c/Program Files/Adobe/Photoshop Elements 5.0/Photoshop Elements 5.0.exe"
+libre -> libreoffice4.4
+lowriter -> libreoffice4.4 --writer
+localc -> libreoffice4.4 --calc
+loimpress -> libreoffice4.4 --impress
+lomath -> libreoffice4.4 --math
+lobase -> libreoffice4.4 --base
+home -> thunar /home/rebooted/
+ralia_home -> thunar /home/rebooted/Scripts/ralia/
+cmd-browser -> lynx
+edit-source -> geany /home/rebooted/Scripts/ralia/ralia.py
+kindle -> playonlinux --run Amazon\ Kindle
+sopen -> sudo thunar
+clone -> xfce4-terminal -x ralia.sh
+update -> sudo apt-get upgrade
+nano -> nano
+gg -> firefox https://www.google.com/?gws_rd=ssl
