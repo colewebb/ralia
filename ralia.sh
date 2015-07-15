@@ -1,2 +1,1 @@
-python /home/rebooted/Scripts/ralia/ralia.py
-
+/home/rebooted/Scripts/ralia/ralia.pyc

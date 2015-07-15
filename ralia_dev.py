@@ -1,9 +1,6 @@
-# I finally have the "passing the command to the system to execute" bit down.
-# This exposes another issue: when I try to cd into a different directory,
-# It doesn't work. The subprocess.call() method sends a command to a
-# terminal, has the terminal execute the command, and closes the terminal.
-# THIS DOES NOT WORK. Perhaps the workaround doesn't exist in code, but in
-# practice. The "t" key brings up a terminal that you can work in. Perhaps
+# update: we can cd out of directories and up the tree, but we can't
+# cd back down into other directories. Also, cding into a directory 
+# appears to break the prompt. It refuses to take more commands.
 
 db_location = "/home/rebooted/Scripts/ralia/db.txt"
 
@@ -20,6 +17,8 @@ terminal_command = "xfce4-terminal -x "
 # terminal_command = ""
 import subprocess
 # importing subprocess module so that this Python script can invoke outside programs and scripts.
+
+status = "devel"
 
 try:
 	db = open(db_location)
@@ -45,6 +44,8 @@ while count >= executed_count:
 		exit()
 	elif input == "x":
 		exit()
+	elif input == "v":
+		print(status)
 	else:
 		input_line = input + " -> "
 		for line in db:

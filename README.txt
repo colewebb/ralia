@@ -8,3 +8,5 @@ In order to set up this program, do the following:
  3. Tweak your database to whatever you want it to look like. Put the key value first, then " -> ", then the command you want to run. You have to a space on both sides of the arrow. The database I have here is what I use personally. It's optimized for XFCE running on top of Ubuntu.
  4. Put the file ralia.sh somewhere on your executable path.
  5. Enjoy!
+ 
+ Note: the two zip files inside this zip file are essentially release points. They are points in time where Ralia worked fairly well, in theory. If it breaks on you, try using one of the zip files.

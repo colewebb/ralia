@@ -12,7 +12,7 @@ google -> firefox https://www.google.com/?gws_rd=ssl
 mail -> geary
 twitter -> polly
 school -> firefox https://www.straighterline.com/customer/account/login/
-office -> firefox https://login.microsoftonline.com/
+ms-office -> firefox https://login.microsoftonline.com/
 live.com -> firefox https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1436462554&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fblu182.mail.live.com%2Fdefault.aspx%3Frru%3Dinbox&lc=1033&id=64855&mkt=en-us&cbcxt=mai
 t -> xfce4-terminal
 monitor -> xfce4-taskmanager
@@ -39,4 +39,6 @@ clone -> xfce4-terminal -x ralia.sh
 update -> sudo apt-get upgrade
 nano -> nano
 gg -> firefox https://www.google.com/?gws_rd=ssl
-edit-source-dev -> geary /home/rebooted/Scripts/ralia/ralia_dev.py
+edit-source-dev -> geany /home/rebooted/Scripts/ralia/ralia_dev.py
+lds -> firefox https://ident.lds.org/sso/UI/Login
+s -> thunar $PWD

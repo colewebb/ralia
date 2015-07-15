@@ -14,6 +14,8 @@ terminal_command = "xfce4-terminal -x "
 import subprocess
 # importing subprocess module so that this Python script can invoke outside programs and scripts.
 
+status = "This program's status is stable. Don't touch it. Use the compiled version\ninstead."
+
 try:
 	db = open(db_location)
 except:
@@ -37,6 +39,11 @@ while count >= executed_count:
 		exit()
 	elif input == "x":
 		exit()
+	elif input == "v":
+		print(status)
+	elif input == "c":
+		subprocess.call("xfce4-terminal -x ralia.sh", shell = True)
+		exit()
 	else:
 		input_line = input + " -> "
 		for line in db:
@@ -47,10 +54,9 @@ while count >= executed_count:
 				execute = terminal_command + execute
 				subprocess.call(execute, shell=True)
 				executed_count = executed_count + 1
-				executed = True
 				executed_count = 0
+				subprocess.call("ralia.sh", shell = True)
+				exit()
 			else:
 				executed_count = executed_count + 1
 				continue
-	if executed == False:
-		subprocess.call(input, shell=True)
