@@ -14,7 +14,7 @@ terminal_command = "xfce4-terminal -x "
 import subprocess
 # importing subprocess module so that this Python script can invoke outside programs and scripts.
 
-status = "This program's status is stable. Don't touch it. Use the compiled version\ninstead."
+status = "This program's status is stable. Don't touch it. Use the compiled version instead."
 
 try:
 	db = open(db_location)
