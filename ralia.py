@@ -9,7 +9,7 @@ location = os.getenv("PWD")
 
 # this command is put in front of the executed command when it is passed to the system
 # for execution.
-terminal_command = "xfce4-terminal --tab --maximize -x "
+terminal_command = "xfce4-terminal --tab -x "
 # terminal_command = ""
 import subprocess
 # importing subprocess module so that this Python script can invoke outside programs and scripts.
