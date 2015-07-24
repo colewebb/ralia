@@ -20,7 +20,7 @@ word -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office
 excel -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/EXCEL.EXE"
 access -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/MSACCESS.EXE"
 publisher -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/MSPUB.EXE"
-c -> speedcrunch
+calc -> speedcrunch
 r -> xfce4-appfinder --collapsed
 photoshop -> wine "/home/rebooted/.wine/drive_c/Program Files/Adobe/Photoshop Elements 5.0/Photoshop Elements 5.0.exe"
 libre -> libreoffice4.4
@@ -42,3 +42,5 @@ gg -> firefox https://www.google.com/?gws_rd=ssl
 edit-source-dev -> geany /home/rebooted/Scripts/ralia/ralia_dev.py
 lds -> firefox https://ident.lds.org/sso/UI/Login
 s -> thunar $PWD
+physics -> libreoffice4.4 --writer ~/Documents/School/physics/Lab+5+Conservation+of+Energy.docx
+nmap -> sudo zenmap
