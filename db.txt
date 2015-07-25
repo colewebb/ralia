@@ -44,4 +44,4 @@ lds -> firefox https://ident.lds.org/sso/UI/Login
 s -> thunar $PWD
 physics -> libreoffice4.4 --writer ~/Documents/School/physics/Lab+5+Conservation+of+Energy.docx
 nmap -> sudo zenmap
-# wikipedia search string: https://en.wikipedia.org/wiki/Special:Search?search=
+wiki -> python ~/Scripts/ralia/wikipedia.py

@@ -1,3 +1,7 @@
+# update: we can cd out of directories and up the tree, but we can't
+# cd back down into other directories. Also, cding into a directory 
+# appears to break the prompt. It refuses to take more commands.
+
 db_location = "/home/rebooted/Scripts/ralia/db.txt"
 
 # the user prompt is in the form <username>@<host>:<location><prompt>
@@ -9,12 +13,12 @@ location = os.getenv("PWD")
 
 # this command is put in front of the executed command when it is passed to the system
 # for execution.
-terminal_command = "xfce4-terminal --tab -x "
+terminal_command = "xfce4-terminal -x "
 # terminal_command = ""
 import subprocess
 # importing subprocess module so that this Python script can invoke outside programs and scripts.
 
-status = "This program's status is stable. Don't touch it. Use the compiled version instead."
+status = "devel"
 
 try:
 	db = open(db_location)
@@ -28,13 +32,13 @@ count = 0
 executed_count = 0
 for line in db:
 	count = count + 1
-print count
 db.close()
 db = open(db_location)
 executed = False
 
+query = username + "@" + host + ":" + location + prompt
+
 while count >= executed_count:
-	query = username + "@" + host + ":" + location + prompt
 	input = raw_input(query)
 	if input == "exit":
 		exit()
@@ -42,28 +46,26 @@ while count >= executed_count:
 		exit()
 	elif input == "v":
 		print(status)
-		executed = True
-	elif input == "c":
-		subprocess.call("xfce4-terminal -x ralia.sh", shell = True)
-		executed = True
-		exit()
 	else:
 		input_line = input + " -> "
-		while executed_count < count:
-			for line in db:
-				if line.startswith(input_line):
-					execute_platform = line.split(input_line,1)
-					execute = execute_platform[1]
-					execute = execute.rstrip()
-					execute = terminal_command + execute
-					subprocess.call(execute, shell=True)
-					executed_count = executed_count + 1
-					print executed_count
-					executed = True
-#					subprocess.call("ralia.sh", shell = True)
-#					exit()
-				else:
-					executed_count = executed_count + 1
-					print executed_count
-					continue
-
+		for line in db:
+			if line.startswith(input_line):
+				execute_platform = line.split(input_line,1)
+				execute = execute_platform[1]
+				execute = execute.rstrip()
+				execute = terminal_command + execute
+				subprocess.call(execute, shell=True)
+				executed_count = executed_count + 1
+				executed = True
+				print(executed_count)
+				executed_count = 0
+			else:
+				executed_count = executed_count + 1
+				continue
+	if executed == False:
+		if input.startswith("cd "):
+			input = input + " && ralia.sh"
+			subprocess.call(input, shell=True)
+			exit()
+		else:
+			subprocess.call(input, shell=True)
