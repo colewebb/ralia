@@ -12,9 +12,9 @@ google -> python /home/rebooted/Scripts/ralia/apps/search/google.py
 gg -> python /home/rebooted/Scripts/ralia/apps/search/google.py
 mail -> geary
 twitter -> polly
-school -> exo-open https://www.straighterline.com/customer/account/login/
-ms-office -> exo-open https://login.microsoftonline.com/
-live.com -> exo-open https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1436462554&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fblu182.mail.live.com%2Fdefault.aspx%3Frru%3Dinbox&lc=1033&id=64855&mkt=en-us&cbcxt=mai
+school -> firefox https://www.straighterline.com/customer/account/login/
+ms-office -> firefox https://login.microsoftonline.com/
+live.com -> firefox https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1436462554&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fblu182.mail.live.com%2Fdefault.aspx%3Frru%3Dinbox&lc=1033&id=64855&mkt=en-us&cbcxt=mai
 t -> xfce4-terminal
 monitor -> xfce4-taskmanager
 word -> wine "/home/rebooted/.wine/drive_c/Program Files/Microsoft Office/Office14/WINWORD.EXE"
@@ -40,7 +40,7 @@ clone -> xfce4-terminal -x ralia.sh
 update -> sudo apt-get upgrade
 nano -> nano
 edit-source-dev -> geany /home/rebooted/Scripts/ralia/ralia_dev.py
-lds -> exo-open https://ident.lds.org/sso/UI/Login
+lds -> firefox https://ident.lds.org/sso/UI/Login
 s -> thunar $PWD
 physics -> libreoffice4.4 --writer ~/Documents/School/physics/Lab+5+Conservation+of+Energy.docx
 nmap -> sudo zenmap
@@ -48,3 +48,5 @@ wiki -> python /home/rebooted/Scripts/ralia/apps/search/wikipedia.py
 firefox-dev -> /home/rebooted/Scripts/firefox/firefox
 twitter-search -> python /home/rebooted/Scripts/ralia/apps/search/twitter.py
 search-twitter -> python /home/rebooted/Scripts/ralia/apps/search/twitter.py
+onenote -> firefox https://www.onenote.com/hrd
+1note -> firefox https://www.onenote.com/hrd
