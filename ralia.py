@@ -1,6 +1,6 @@
 db_location = "/home/rebooted/Scripts/ralia/db.txt"
 
-# Ralia - Command line enhanced shell shell.
+# Ralia - Command line enhanced shell.
 #    Copyright (C) 2015  Cole Webb
 #
 # This program is free software: you can redistribute it and/or modify it under the terms of
