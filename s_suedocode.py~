@@ -1,0 +1,6 @@
+input = some-key
+if input == ".":
+	call xdg-open $PWD
+elif input == "..":
+	call xdg-open $PWD #without the last directory on the end
+
